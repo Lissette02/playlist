@@ -16,6 +16,11 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 // Songs
+
+$( document ).ready(function() {
+	
+	
+	
 var mySong = {
 	"title":"Bop to the Top",
 	"artist":"High School Muscial",
@@ -28,7 +33,7 @@ var myPlayList = [
 	"title":"Bop to the Top",
 	"artist":"High School Muscial",
 	"mp3URL":"https://open.spotify.com/track/4gqjxYiEorFk0y9b92uFdE",
-	"imageURL":"https://vignette.wikia.nocookie.net/hsm/images/0/07/Bop_to_the_Top.jpg/revision/latest?cb=20070510230153",
+	"imageURL":"https://vignette.wikia.nocookie.net/glee/images/d/d3/Bop_to_the_top.gif/revision/latest?cb=20140610225253",
 	},
 	{
 		"title":"Get'cha Head in the Game",
@@ -46,15 +51,6 @@ var myPlayList = [
 ]
 
 
-
-// DOCUMENT READY FUNCTION
-$( document ).ready(function() {
-  
-displayList();
-
-
-});
-
 function displayList(){
 
 
@@ -66,17 +62,46 @@ for (var i=0; i < myPlayList.length; i = i + 1) {
 		$('.songs').append("<img src=" + myPlayList[i].imageURL + ">");
 	}
 }
-  
+
 
 
 function clearList(){
-  
+  $('#songs').empty();
   
   
 }
 
+
+// DOCUMENT READY FUNCTION
+
+  $('button').click(function(){
+       addSong();
+       clearList();
+       displayList();
+       
+       
+       
+   });
+
+	
+
+
+
+  
+
+
 function addSong(){
- 
+	
+   var titleInput=$("#title").val();
+   var artistInput=$("#artist").val(); 
+   var mp3URLInput=$("#mp3URL").val(); 
+   var imageURLInput=$("#imageURL").val(); 
+myPlayList.push({title: titleInput, artist: artistInput, mp3URL: mp3URLInput, imageURL: imageURLInput });
   
   
 }
+
+displayList();
+
+});
+
