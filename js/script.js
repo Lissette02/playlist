@@ -39,7 +39,7 @@ var myPlayList = [
 		"title":"Get'cha Head in the Game",
 		"artist":"High School Muscial",
 		"mp3URL":"https://open.spotify.com/album/5t3TtafWdQEg3N38GNOx1T",
-		"imageURL":"https://img.buzzfeed.com/buzzfeed-static/static/2017-12/10/2/enhanced/buzzfeed-prod-web-03/enhanced-buzz-10695-1512889437-0.jpg?downsize=715:*&output-format=auto&output-quality=auto",
+		"imageURL":"https://media2.giphy.com/media/Np71UmKxGzNdK/giphy.gif",
 	},
 	{
 		"title":"What time is it",
@@ -97,9 +97,10 @@ function addSong(){
    var mp3URLInput=$("#mp3URL").val(); 
    var imageURLInput=$("#imageURL").val(); 
 myPlayList.push({title: titleInput, artist: artistInput, mp3URL: mp3URLInput, imageURL: imageURLInput });
-  
+
   
 }
+
 
 displayList();
 
