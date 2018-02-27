@@ -60,10 +60,16 @@ for (var i=0; i < myPlayList.length; i = i + 1) {
         $('.songs').append("<p>Artist: " + myPlayList[i].artist + "</p>");
 		$('.songs').append(" <a href=" + myPlayList[i].mp3URL + "> Listen </a>");
 		$('.songs').append("<img src=" + myPlayList[i].imageURL + ">");
+		$('.songs').append("<button class='deletebutton'> delete </button>")
 	}
 }
 
 
+
+$( "body" ).on( "click", ".deletebutton" ,function() {
+ 
+  console.log(myPlayList[0]);
+});
 
 function clearList(){
   $('#songs').empty();
